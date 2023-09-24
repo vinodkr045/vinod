@@ -26,7 +26,7 @@ To run this program, you can use Remix, an online Solidity IDE. To get started, 
 
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., token.sol). Copy and paste the following code into the file:
 
-javascript
+```javascript
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
 
@@ -56,7 +56,7 @@ contract MyToken {
     function mint(address _inpaddr, uint  _inpval)public {
       totalsupply += _inpval;
       balance[_inpaddr] += _inpval;
-
+   }
     // burn function
    function burn(address _inpaddr, uint _inpval)public {
       if(balance[_inpaddr]>= _inpval){
@@ -66,7 +66,7 @@ contract MyToken {
      }
   }
 
-
+```
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile token.sol" button.
 
@@ -84,4 +84,4 @@ vinodakr66@gmail.com
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file
+This project is licensed under the MIT License - see the LICENSE.md file for details
