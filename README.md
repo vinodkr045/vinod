@@ -56,7 +56,7 @@ contract MyToken {
     function mint(address _inpaddr, uint  _inpval)public {
       totalsupply += _inpval;
       balance[_inpaddr] += _inpval;
-   }
+
     // burn function
    function burn(address _inpaddr, uint _inpval)public {
       if(balance[_inpaddr]>= _inpval){
