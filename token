@@ -1,0 +1,21 @@
+contract MyToken {
+
+    // public variables here
+    string public tokenname="LOWKEY";
+    string public tokenabbrv="LK";
+    uint public totalsupply=1000;
+    // mapping variable here
+    mapping(address => uint)public balance;
+    // mint function
+    function mint(address _inpaddr, uint  _inpval)public {
+      totalsupply += _inpval;
+      balance[_inpaddr] += _inpval;
+   }
+    // burn function
+   function burn(address _inpaddr, uint _inpval)public {
+      if(balance[_inpaddr]>= _inpval){
+        totalsupply -= _inpval;
+        balance[_inpaddr] -= _inpval;
+      }
+     }
+  }
